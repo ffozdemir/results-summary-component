@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  --color-primary-light-red: hsl(0, 100%, 67%);
+  --color-primary-orangey-yellow: hsl(39, 100%, 56%);
+  --color-primary-green-teal: hsl(166, 100%, 37%);
+  --color-primary-cobalt-blue: hsl(234, 85%, 45%);
+
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-pale-blue: hsl(221, 100%, 96%);
+  --color-neutral-light-lavender: hsl(241, 100%, 89%);
+  --color-neutral-dark-gray-blue: hsl(224, 30%, 27%);
+
+  --color-gradient-light-slate-blue: hsl(252, 100%, 67%);
+  --color-gradient-light-royal-blue: hsl(241, 81%, 54%);
+  --color-gradient-violet-blue: hsla(256, 72%, 46%, 1);
+  --color-gradient-persian-blue: hsla(241, 72%, 46%, 0);
+
+  --font-family-body: "Hanken Grotesk", sans-serif;
+  --font-size-body: 1.125rem;
+  --font-weight-500: 500;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: var(--color-neutral-pale-blue);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--color-neutral-white);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  font-weight: var(--font-weight-500);
+  font-family: var(--font-family-body);
+}
+
+.card-header {
+  padding: 40px;
+  display: flex;
+  border-radius: 20px 20px 40px 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-gradient-light-slate-blue) 1%,
+    var(--color-gradient-light-royal-blue) 99%
+  );
+}
+
+.card-header h1 {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-500);
+  color: var(--color-neutral-white);
+}
+
+.result-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-gradient-violet-blue),
+    var(--color-gradient-persian-blue)
+  );
+}
+
+.result-circle :first-child {
+  font-size: 4rem;
+  font-weight: var(--font-weight-800);
+  color: var(--color-neutral-white);
+}
+
+.result-circle :last-child {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-500);
+  color: var(--color-neutral-light-lavender);
+}
+
+.result-text :first-child {
+  font-size: 1.7rem;
+  font-weight: var(--font-weight-700);
+  color: var(--color-neutral-white);
+  text-align: center;
+}
+
+.result-text :last-child {
+  font-size: 1.2rem;
+  color: var(--color-neutral-pale-blue);
+  text-align: center;
+  margin-top: 10px;
+}
