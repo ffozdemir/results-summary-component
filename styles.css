@@ -56,6 +56,7 @@ section {
   border-radius: 20px 20px 40px 40px;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   gap: 20px;
   background: linear-gradient(
     to bottom,
@@ -109,4 +110,120 @@ section {
   color: var(--color-neutral-pale-blue);
   text-align: center;
   margin-top: 10px;
+}
+
+.card-body {
+  padding: 25px 40px 50px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-body h2 {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-700);
+  color: var(--color-neutral-dark-gray-blue);
+}
+
+.card-body .spec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  border-radius: 10px;
+  background-color: hsla(40, 36%, 95%, 0.233);
+}
+
+.card-body .spec .spec-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.spec p {
+  font-size: 1rem;
+  font-weight: var(--font-weight-500);
+}
+
+.spec p span {
+  font-weight: var(--font-weight-700);
+  color: var(--color-neutral-light-lavender);
+}
+
+.primary {
+  color: var(--color-primary-light-red);
+}
+
+.yellow {
+  color: var(--color-primary-orangey-yellow);
+}
+.green {
+  color: var(--color-primary-green-teal);
+}
+.blue {
+  color: var(--color-primary-cobalt-blue);
+}
+
+.card-body button {
+  padding: 15px;
+  border-radius: 50px;
+  background-color: var(--color-neutral-dark-gray-blue);
+  color: var(--color-neutral-white);
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-700);
+  font-family: var(--font-family-body);
+  border: none;
+  cursor: pointer;
+}
+
+.card-body button:hover,
+.card-body button:active {
+  background-color: var(--color-primary-cobalt-blue);
+  background: linear-gradient(
+    to bottom,
+    var(--color-gradient-light-slate-blue) 1%,
+    var(--color-gradient-light-royal-blue) 99%
+  );
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  section {
+    max-width: 700px;
+    flex-direction: row;
+    border-radius: 35px;
+  }
+
+  .card-header {
+    width: 50%;
+    border-radius: 35px;
+  }
+
+  .card-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .card-body {
+    width: 50%;
+  }
+
+  .result-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .result-circle :first-child {
+    font-size: 5rem;
+  }
+
+  .result-circle :last-child {
+    font-size: 1rem;
+  }
+
+  .card-body h2 {
+    font-size: 1.4rem;
+  }
 }
